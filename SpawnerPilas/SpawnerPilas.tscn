@@ -1,0 +1,101 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh6nr4owdwcl8"]
+
+[ext_resource type="Script" path="res://SpawnerPilas/SpawnerPilas.gd" id="1_k7cg0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hv1he"]
+size = Vector2(600, 450)
+
+[node name="SpawnerPilas" type="Node2D"]
+script = ExtResource("1_k7cg0")
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="Cuadrante1" type="Area2D" parent="."]
+position = Vector2(-302, -313)
+
+[node name="Hitbox" type="CollisionShape2D" parent="Cuadrante1"]
+position = Vector2(-4, 81)
+shape = SubResource("RectangleShape2D_hv1he")
+
+[node name="Spawn1" type="Node2D" parent="Cuadrante1"]
+position = Vector2(-168, 68)
+
+[node name="Spawn2" type="Node2D" parent="Cuadrante1"]
+position = Vector2(145, 60)
+
+[node name="Spawn3" type="Node2D" parent="Cuadrante1"]
+position = Vector2(-144, 222)
+
+[node name="Spawn4" type="Node2D" parent="Cuadrante1"]
+position = Vector2(164, 246)
+
+[node name="Spawn5" type="Node2D" parent="Cuadrante1"]
+position = Vector2(9, 149)
+
+[node name="Cuadrante2" type="Area2D" parent="."]
+position = Vector2(313, -317)
+
+[node name="Hitbox" type="CollisionShape2D" parent="Cuadrante2"]
+position = Vector2(-4, 81)
+shape = SubResource("RectangleShape2D_hv1he")
+
+[node name="Spawn1" type="Node2D" parent="Cuadrante2"]
+position = Vector2(-168, 68)
+
+[node name="Spawn2" type="Node2D" parent="Cuadrante2"]
+position = Vector2(145, 60)
+
+[node name="Spawn3" type="Node2D" parent="Cuadrante2"]
+position = Vector2(-193, 226)
+
+[node name="Spawn4" type="Node2D" parent="Cuadrante2"]
+position = Vector2(164, 246)
+
+[node name="Spawn5" type="Node2D" parent="Cuadrante2"]
+position = Vector2(-34, 140)
+
+[node name="Cuadrante3" type="Area2D" parent="."]
+position = Vector2(-301, 145)
+
+[node name="Hitbox" type="CollisionShape2D" parent="Cuadrante3"]
+position = Vector2(-4, 81)
+shape = SubResource("RectangleShape2D_hv1he")
+
+[node name="Spawn1" type="Node2D" parent="Cuadrante3"]
+position = Vector2(-157, -62)
+
+[node name="Spawn2" type="Node2D" parent="Cuadrante3"]
+position = Vector2(156, -70)
+
+[node name="Spawn3" type="Node2D" parent="Cuadrante3"]
+position = Vector2(-133, 92)
+
+[node name="Spawn4" type="Node2D" parent="Cuadrante3"]
+position = Vector2(175, 116)
+
+[node name="Spawn5" type="Node2D" parent="Cuadrante3"]
+position = Vector2(-23, 10)
+
+[node name="Cuadrante4" type="Area2D" parent="."]
+position = Vector2(314, 149)
+
+[node name="Hitbox" type="CollisionShape2D" parent="Cuadrante4"]
+position = Vector2(-4, 81)
+shape = SubResource("RectangleShape2D_hv1he")
+
+[node name="Spawn1" type="Node2D" parent="Cuadrante4"]
+position = Vector2(-198, -62)
+
+[node name="Spawn2" type="Node2D" parent="Cuadrante4"]
+position = Vector2(115, -70)
+
+[node name="Spawn3" type="Node2D" parent="Cuadrante4"]
+position = Vector2(-174, 92)
+
+[node name="Spawn4" type="Node2D" parent="Cuadrante4"]
+position = Vector2(134, 116)
+
+[node name="Spawn5" type="Node2D" parent="Cuadrante4"]
+position = Vector2(-64, 10)

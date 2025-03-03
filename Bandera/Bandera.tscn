@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://c801xyj37xuy1"]
+
+[ext_resource type="Texture2D" uid="uid://cauob3mn6tsjx" path="res://Bandera/Sprites/Bandera.png" id="1_ghyu1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_byend"]
+radius = 34.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vwc1j"]
+radius = 68.0
+
+[node name="Bandera" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+z_index = 1
+texture = ExtResource("1_ghyu1")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_byend")
+
+[node name="AreaCaptura" type="Area2D" parent="."]
+
+[node name="Sprite" type="Sprite2D" parent="AreaCaptura"]
+modulate = Color(1, 1, 1, 0.407)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ghyu1")
+
+[node name="Hitbox" type="CollisionShape2D" parent="AreaCaptura"]
+shape = SubResource("CircleShape2D_vwc1j")

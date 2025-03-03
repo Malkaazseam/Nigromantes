@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://c64d4ef2bj35u"]
+
+[ext_resource type="PackedScene" uid="uid://dh6nr4owdwcl8" path="res://SpawnerPilas/SpawnerPilas.tscn" id="1_ig1eu"]
+[ext_resource type="PackedScene" uid="uid://cr71ea48ts6q8" path="res://Mago/Mago.tscn" id="1_ptwhg"]
+[ext_resource type="PackedScene" uid="uid://cg224i6uxy68b" path="res://Tablero/Tablero.tscn" id="2_0lrt7"]
+
+[node name="Principal" type="Node2D"]
+
+[node name="Camara" type="Camera2D" parent="."]
+
+[node name="SpawnerPilas" parent="." instance=ExtResource("1_ig1eu")]
+
+[node name="Tablero1" parent="." instance=ExtResource("2_0lrt7")]
+position = Vector2(-320, -292)
+scale = Vector2(4, 4)
+
+[node name="Tablero2" parent="." instance=ExtResource("2_0lrt7")]
+position = Vector2(282, -289)
+scale = Vector2(4, 4)
+
+[node name="Mago1" parent="." node_paths=PackedStringArray("contrincante", "tablero") instance=ExtResource("1_ptwhg")]
+position = Vector2(-204, -120)
+contrincante = NodePath("../Mago2")
+tablero = NodePath("../Tablero1")
+
+[node name="Mago2" parent="." node_paths=PackedStringArray("contrincante", "tablero") instance=ExtResource("1_ptwhg")]
+position = Vector2(268, 3)
+joystick = true
+contrincante = NodePath("../Mago1")
+tablero = NodePath("../Tablero2")

@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://bjs7jnqoaoieu"]
+
+[ext_resource type="Texture2D" uid="uid://bsme3yoamw7gu" path="res://Pila/Sprites/Pila.png" id="1_f51ir"]
+[ext_resource type="Script" path="res://Pila/Pila.gd" id="1_rgkvu"]
+[ext_resource type="Script" path="res://Pila/AreaRecoleccion.gd" id="3_dxext"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_av160"]
+radius = 32.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_20kft"]
+radius = 65.0
+
+[node name="Pila" type="StaticBody2D"]
+collision_layer = 16
+script = ExtResource("1_rgkvu")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_f51ir")
+
+[node name="SpriteAreaExtraccion" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.158)
+scale = Vector2(2, 2)
+texture = ExtResource("1_f51ir")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_av160")
+
+[node name="AreaExtraccion" type="Area2D" parent="."]
+collision_layer = 32
+script = ExtResource("3_dxext")
+
+[node name="Hitbox" type="CollisionShape2D" parent="AreaExtraccion"]
+shape = SubResource("CircleShape2D_20kft")

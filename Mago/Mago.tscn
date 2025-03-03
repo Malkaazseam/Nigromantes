@@ -1,0 +1,78 @@
+[gd_scene load_steps=10 format=3 uid="uid://cr71ea48ts6q8"]
+
+[ext_resource type="Script" path="res://Mago/Mago.gd" id="1_wqd33"]
+[ext_resource type="Texture2D" uid="uid://brut6m5fchwmh" path="res://Mago/Sprites/Mago.png" id="2_n711c"]
+[ext_resource type="Script" path="res://Mago/Mano.gd" id="3_hsj2p"]
+[ext_resource type="Texture2D" uid="uid://b1kk2ab8ergh8" path="res://Mago/Sprites/Flecha.png" id="4_0051i"]
+[ext_resource type="Script" path="res://Mago/Escudo.gd" id="4_gbny6"]
+[ext_resource type="Script" path="res://Mago/Melee.gd" id="5_fkap0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dcysy"]
+radius = 33.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfypm"]
+size = Vector2(20, 88)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kyxh3"]
+radius = 33.0
+
+[node name="Mago" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_wqd33")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_n711c")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_dcysy")
+
+[node name="Mano" type="Node2D" parent="."]
+script = ExtResource("3_hsj2p")
+
+[node name="Escudo" type="Area2D" parent="Mano"]
+collision_layer = 4
+collision_mask = 2
+monitoring = false
+monitorable = false
+script = ExtResource("4_gbny6")
+
+[node name="Hitbox2" type="CollisionShape2D" parent="Mano/Escudo"]
+shape = SubResource("RectangleShape2D_tfypm")
+
+[node name="Sprite" type="Sprite2D" parent="Mano/Escudo"]
+visible = false
+position = Vector2(0, 2)
+scale = Vector2(0.6875, 1.60938)
+texture = ExtResource("4_0051i")
+
+[node name="Melee" type="Area2D" parent="Mano"]
+collision_layer = 2
+collision_mask = 5
+monitoring = false
+monitorable = false
+script = ExtResource("5_fkap0")
+
+[node name="Hitbox" type="CollisionPolygon2D" parent="Mano/Melee"]
+position = Vector2(-64, -21)
+rotation = 1.56459
+polygon = PackedVector2Array(-47.5231, -28.3716, -42.6392, -58.2658, -23.4223, -93.1472, 16.67, -107.899, 60.5822, -93.6258, 84.377, -60.4775, 88.1721, -27.4533, 48.4025, -64.7008, 16.5086, -81.8991, -12.5839, -67.0794)
+
+[node name="Sprite" type="Sprite2D" parent="Mano/Melee"]
+visible = false
+modulate = Color(0.933934, 0.0719788, 0.0448633, 1)
+position = Vector2(28, 0)
+scale = Vector2(1, 1.85938)
+texture = ExtResource("4_0051i")
+
+[node name="AreaExtraccion" type="Area2D" parent="."]
+collision_mask = 32
+
+[node name="Hitbox" type="CollisionShape2D" parent="AreaExtraccion"]
+shape = SubResource("CircleShape2D_kyxh3")
+
+[node name="AnimacionExtraccion" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.35)
+position = Vector2(-1, -1)
+scale = Vector2(1.375, 1.32813)
+texture = ExtResource("4_0051i")
