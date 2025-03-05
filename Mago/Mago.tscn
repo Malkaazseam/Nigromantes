@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=3 uid="uid://cr71ea48ts6q8"]
 
-[ext_resource type="Script" path="res://Mago/Mago.gd" id="1_wqd33"]
+[ext_resource type="Script" uid="uid://ccls0qbka2o7b" path="res://Mago/Mago.gd" id="1_wqd33"]
 [ext_resource type="Texture2D" uid="uid://brut6m5fchwmh" path="res://Mago/Sprites/Mago.png" id="2_n711c"]
-[ext_resource type="Script" path="res://Mago/Mano.gd" id="3_hsj2p"]
+[ext_resource type="Script" uid="uid://b56d144guv" path="res://Mago/Mano.gd" id="3_hsj2p"]
 [ext_resource type="Texture2D" uid="uid://b1kk2ab8ergh8" path="res://Mago/Sprites/Flecha.png" id="4_0051i"]
-[ext_resource type="Script" path="res://Mago/Escudo.gd" id="4_gbny6"]
-[ext_resource type="Script" path="res://Mago/Melee.gd" id="5_fkap0"]
+[ext_resource type="Script" uid="uid://b57q46bch42lh" path="res://Mago/Escudo.gd" id="4_gbny6"]
+[ext_resource type="Script" uid="uid://cefxgx2v4675c" path="res://Mago/Melee.gd" id="5_fkap0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dcysy"]
 radius = 33.0

@@ -11,4 +11,3 @@ func capturar(mago):
 	magoConBandera = mago
 	$Linea.add_point(Vector2(0, 0))
 	$Linea.add_point(to_local(magoConBandera.position))
-	

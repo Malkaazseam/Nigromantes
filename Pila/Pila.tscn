@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://bjs7jnqoaoieu"]
 
 [ext_resource type="Texture2D" uid="uid://bsme3yoamw7gu" path="res://Pila/Sprites/Pila.png" id="1_f51ir"]
-[ext_resource type="Script" path="res://Pila/Pila.gd" id="1_rgkvu"]
-[ext_resource type="Script" path="res://Pila/AreaRecoleccion.gd" id="3_dxext"]
+[ext_resource type="Script" uid="uid://b3unigdr6rfim" path="res://Pila/Pila.gd" id="1_rgkvu"]
+[ext_resource type="Script" uid="uid://dscm7j42bpch1" path="res://Pila/AreaRecoleccion.gd" id="3_dxext"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_av160"]
 radius = 32.0

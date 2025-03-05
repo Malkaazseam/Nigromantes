@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://c801xyj37xuy1"]
 
 [ext_resource type="Texture2D" uid="uid://cauob3mn6tsjx" path="res://Bandera/Sprites/Bandera.png" id="1_ghyu1"]
-[ext_resource type="Script" path="res://Bandera/Bandera.gd" id="1_ie1rd"]
-[ext_resource type="Script" path="res://Bandera/AreaCaptura.gd" id="3_gtrbq"]
+[ext_resource type="Script" uid="uid://bf2x3pag036p7" path="res://Bandera/Bandera.gd" id="1_ie1rd"]
+[ext_resource type="Script" uid="uid://bvihma8silwbp" path="res://Bandera/AreaCaptura.gd" id="3_gtrbq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_byend"]
 radius = 34.0

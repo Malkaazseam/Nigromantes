@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dh6nr4owdwcl8"]
 
-[ext_resource type="Script" path="res://SpawnerPilas/SpawnerPilas.gd" id="1_k7cg0"]
+[ext_resource type="Script" uid="uid://cpdygjaykg7mf" path="res://SpawnerPilas/SpawnerPilas.gd" id="1_k7cg0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hv1he"]
 size = Vector2(600, 450)

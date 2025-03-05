@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bqyrc18k073n4"]
 
 [ext_resource type="Texture2D" uid="uid://c7k60a18ndpih" path="res://Rango/Sprites/Flecha.png" id="1_6envp"]
-[ext_resource type="Script" path="res://Rango/Rango.gd" id="1_jvge5"]
+[ext_resource type="Script" uid="uid://dswc27ttks4hs" path="res://Rango/Rango.gd" id="1_jvge5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_emlgt"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cg224i6uxy68b"]
 
-[ext_resource type="Script" path="res://Tablero/Tablero.gd" id="1_ejo6r"]
+[ext_resource type="Script" uid="uid://blpv8ew0m1brh" path="res://Tablero/Tablero.gd" id="1_ejo6r"]
 
 [node name="Tablero" type="Node2D"]
 script = ExtResource("1_ejo6r")

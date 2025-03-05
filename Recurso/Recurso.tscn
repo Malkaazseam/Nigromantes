@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cdjyp5vhv05p5"]
 
 [ext_resource type="Texture2D" uid="uid://8sswrb2hcv6y" path="res://Recurso/Sprites/Recurso.png" id="1_e3jxf"]
-[ext_resource type="Script" path="res://Recurso/Recurso.gd" id="2_ehner"]
+[ext_resource type="Script" uid="uid://bc7sjeclkkclf" path="res://Recurso/Recurso.gd" id="2_ehner"]
 
 [node name="Recurso" type="Sprite2D"]
 scale = Vector2(0.25, 0.25)
