@@ -19,8 +19,8 @@ func input(event: InputEvent):
 			mago.cambiarEstadoEscudoMoviendose()
 		elif event.is_action_pressed("RangoJoystick"):
 			mago.cambiarEstadoRango()
-		elif event.is_action_pressed("ExtraerJoystick"):
-			mago.cambiarEstadoExtrayendo()
+		elif event.is_action_pressed("AccionJoystick"):
+			mago.accion()
 	else:
 		if event.is_action_pressed("Melee"):
 			mago.cambiarEstadoMelee()
@@ -28,6 +28,6 @@ func input(event: InputEvent):
 			mago.cambiarEstadoEscudoMoviendose()
 		elif event.is_action_pressed("Rango"):
 			mago.cambiarEstadoRango()
-		elif event.is_action_pressed("Extraer"):
-			mago.cambiarEstadoExtrayendo()
+		elif event.is_action_pressed("Accion"):
+			mago.accion()
 	

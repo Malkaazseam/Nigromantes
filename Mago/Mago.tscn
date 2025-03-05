@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cr71ea48ts6q8"]
+[gd_scene load_steps=11 format=3 uid="uid://cr71ea48ts6q8"]
 
 [ext_resource type="Script" path="res://Mago/Mago.gd" id="1_wqd33"]
 [ext_resource type="Texture2D" uid="uid://brut6m5fchwmh" path="res://Mago/Sprites/Mago.png" id="2_n711c"]
@@ -16,7 +16,11 @@ size = Vector2(20, 88)
 [sub_resource type="CircleShape2D" id="CircleShape2D_kyxh3"]
 radius = 33.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_y5pad"]
+radius = 33.0
+
 [node name="Mago" type="CharacterBody2D"]
+collision_mask = 17
 motion_mode = 1
 script = ExtResource("1_wqd33")
 
@@ -76,3 +80,9 @@ modulate = Color(1, 1, 1, 0.35)
 position = Vector2(-1, -1)
 scale = Vector2(1.375, 1.32813)
 texture = ExtResource("4_0051i")
+
+[node name="AreaAccion" type="Area2D" parent="."]
+collision_mask = 96
+
+[node name="Hitbox" type="CollisionShape2D" parent="AreaAccion"]
+shape = SubResource("CircleShape2D_y5pad")

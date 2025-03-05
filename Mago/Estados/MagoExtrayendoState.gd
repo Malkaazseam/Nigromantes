@@ -1,16 +1,12 @@
 class_name MagoExtrayendoState extends MagoState
 
-const SEGUNDOS_INTENTO_EXTRACCION: float = 0.25
 const SEGUNDOS_EXTRAYENDO: float = 1
 var segundosRestantes: float
 
 func _init(magoNuevo):
 	super(magoNuevo)
 	
-	if mago.extraccion.has_overlapping_areas():
-		segundosRestantes = SEGUNDOS_EXTRAYENDO
-	else:
-		segundosRestantes = SEGUNDOS_INTENTO_EXTRACCION
+	segundosRestantes = SEGUNDOS_EXTRAYENDO
 	#debug
 	mago.animacionExtraccion.visible = true
 	

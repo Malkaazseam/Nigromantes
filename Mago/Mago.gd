@@ -23,6 +23,7 @@ var escudo: Area2D
 var spriteEscudo: Sprite2D
 var resRango: Resource
 var extraccion: Area2D
+var areaAccion: Area2D
 var animacionExtraccion: Sprite2D
 
 const SEGUNDOS_ESCUDO: float = 0.5
@@ -30,6 +31,8 @@ var segundosRestantesEscudo: float
 
 const SEGUNDOS_INVULNERABILIDAD: float = 0.25
 var segundosRestantesInvulnerabilidad: float
+
+var conBandera: bool
 
 func _ready() -> void:
 	sprite = $Sprite
@@ -40,9 +43,12 @@ func _ready() -> void:
 	spriteEscudo = $Mano/Escudo/Sprite
 	resRango = load("res://Rango/Rango.tscn")
 	extraccion = $AreaExtraccion
+	areaAccion = $AreaAccion
 	animacionExtraccion = $AnimacionExtraccion
 	
 	vidas = VIDAS_MAXIMAS
+	
+	conBandera = false
 	
 	cambiarEstadoInactivo()
 
@@ -79,6 +85,21 @@ func impacto():
 func adquirirRecurso():
 	if tablero != null:
 		tablero.sumarPunto()
+		
+func capturar():
+	if areaAccion.has_overlapping_areas():
+		for area in areaAccion.get_overlapping_areas():
+			if area is AreaCaptura:
+				area.capturar(self)
+				conBandera = true
+		
+func accion():
+	if areaAccion.has_overlapping_areas():
+		var area = areaAccion.get_overlapping_areas()[0]
+		if area is AreaExtraccion:
+			cambiarEstadoExtrayendo()
+		elif area is AreaCaptura:
+			cambiarEstadoCapturando()
 	
 #cambios de estado
 func cambiarEstadoInactivo():
@@ -104,3 +125,6 @@ func cambiarEstadoEscudoMoviendose():
 
 func cambiarEstadoExtrayendo():
 	estado = MagoExtrayendoState.new(self)
+
+func cambiarEstadoCapturando():
+	estado = MagoCarpturandoState.new(self)
